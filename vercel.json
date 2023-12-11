@@ -2,5 +2,8 @@
   "version": 2,
   "env": {
     "OPENAI_API_KEY": "@openai_api_key"
-  }
+  },
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/api/index" }
+  ]
 }
