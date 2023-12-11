@@ -6,7 +6,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Set your API key here
-api_key = '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'
+api_key = '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'
 client = OpenAI(api_key=api_key)
 
 def get_response(message):
