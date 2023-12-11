@@ -10,11 +10,12 @@ api_key = 'your-api-key'
 client = OpenAI(api_key=api_key)
 
 def get_response(message):
-    chat_completion = client.chat.completions.create(
-        messages=[{"role": "user", "content": message}],
-        model="gpt-4-1106-preview",
-    )
-    return chat_completion.choices[0].message.content
+    return message
+    # chat_completion = client.chat.completions.create(
+    #     messages=[{"role": "user", "content": message}],
+    #     model="gpt-4-1106-preview",
+    # )
+    # return chat_completion.choices[0].message.content
 
 @app.route('/chat', methods=['GET'])
 def chat():
