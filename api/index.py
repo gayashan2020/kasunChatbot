@@ -6,13 +6,13 @@ app = Flask(__name__)
 CORS(app)
 
 # Set your API key here
-api_key = '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'
+api_key = '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'
 client = OpenAI(api_key=api_key)
 
 def get_response(message):
     chat_completion = client.chat.completions.create(
         messages=[{"role": "user", "content": message}],
-        model="gpt-4-1106-preview",
+        model="gpt-3.5-turbo",
     )
     return chat_completion.choices[0].message.content
 
