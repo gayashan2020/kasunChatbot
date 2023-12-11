@@ -16,12 +16,13 @@ def get_response(message):
     )
     return chat_completion.choices[0].message.content
 
-@app.route('/chat', methods=['POST'])
+@app.route('/chat')
 def chat():
-    data = request.json
-    message = data['message']
+    # data = request.json
+    # message = data['message']
     # response = get_response(message)
-    return jsonify({"response": message})
+    # return jsonify({"response": response})
+    return "Test"
 
 
 
