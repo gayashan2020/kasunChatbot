@@ -20,8 +20,8 @@ def get_response(message):
 def chat():
     data = request.json
     message = data['message']
-    response = get_response(message)
-    return jsonify({"response": response})
+    # response = get_response(message)
+    return jsonify({"response": message})
 
 
 
